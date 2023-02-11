@@ -349,6 +349,7 @@ public class CalculadoraEstadisticas
 
 		return todoterreno;
 	}
+	
 
 	/**
 	 * Consulta cuáles han sido los medallistas de un determinado país y de un
@@ -392,6 +393,12 @@ public class CalculadoraEstadisticas
 				cantidadMedallistas++;
 		}
 		return cantidadMedallistas / cantidadAtletas;
+	}
+	
+	public String paisAtleta(String nombreAtleta) {
+		Atleta atletaX = buscarAtleta(nombreAtleta);
+		Pais pais = atletaX.darPais();
+		return pais.darNombre();
 	}
 
 	/**
